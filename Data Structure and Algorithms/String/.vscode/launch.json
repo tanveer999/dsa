@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ImplementStrStr",
+            "request": "launch",
+            "mainClass": "ImplementStrStr",
+            "projectName": "String_5a5e1884"
+        },
+        {
+            "type": "java",
+            "name": "Launch RomanToInteger",
+            "request": "launch",
+            "mainClass": "RomanToInteger",
+            "projectName": "String_5a5e1884"
+        },
+        {
+            "type": "java",
+            "name": "Launch LongestCommonPrefix",
+            "request": "launch",
+            "mainClass": "LongestCommonPrefix",
+            "projectName": "String_5a5e1884"
+        },
+        {
+            "type": "java",
             "name": "Launch AddStrings",
             "request": "launch",
             "mainClass": "AddStrings",
