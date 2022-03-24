@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ValidPalindromeII",
+            "request": "launch",
+            "mainClass": "ValidPalindromeII",
+            "projectName": "String_5a5e1884"
+        },
+        {
+            "type": "java",
             "name": "Launch ImplementStrStr",
             "request": "launch",
             "mainClass": "ImplementStrStr",
