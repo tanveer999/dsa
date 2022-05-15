@@ -3,6 +3,7 @@ package recursion;
 public class RopeCuttingProblem {
     public static void main(String[] args) {
         System.out.println(maxPiece(23, 11, 9, 12));
+        System.out.println("".length());
     }
 
     public static int maxPiece(int n, int a, int b, int c) {
