@@ -4,7 +4,8 @@ public class FrequencyInSortedArray {
     public static void main(String[] args) {
         // int[] arr = {10, 10, 10, 25, 30, 30};
         // int[] arr = {10, 10, 10, 10};
-        int[] arr = {10, 20, 30};
+        // int[] arr = {10, 20, 30};
+        int[] arr = {10};
         elementFrequency(arr, arr.length);
     }
 
