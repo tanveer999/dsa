@@ -24,4 +24,5 @@ public class FrequencyInSortedArray {
         }
         System.out.println(temp + "   " + count); // count of last n same element / elements
     }
+    
 }
