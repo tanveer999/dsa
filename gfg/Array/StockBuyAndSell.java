@@ -4,11 +4,12 @@ public class StockBuyAndSell {
     public static void main(String[] args) {
         // int[] arr = {1, 5, 3, 1, 2, 8};
         // int[] arr =  {1, 5, 3, 1, 2, 8, 1};
-        // int[] arr = {1, 5, 3, 8, 12}; 
+        int[] arr = {1, 5, 3, 8, 12}; 
         // int[] arr = {30, 20, 10};
-        int[] arr = {10, 20, 30};
+        // int[] arr = {10, 20, 30};
         System.out.println(buyAndSell1(arr, arr.length));
         System.out.println(buyAndSell2(arr, arr.length));
+        System.out.println(buyAndSell3(arr, arr.length));
     }
 
     public static int buyAndSell1(int[] arr, int n) {
@@ -54,6 +55,16 @@ public class StockBuyAndSell {
             }
         }
         if(max > 0) sum += (max - min);
+        return sum;
+    }
+
+    public static int buyAndSell3(int[] arr, int n) {
+        int sum = 0;
+        for(int i = 1; i < n; i++) {
+            if(arr[i] > arr[i - 1]) {
+                sum += arr[i] - arr[i - 1];
+            }
+        }
         return sum;
     }
 }
