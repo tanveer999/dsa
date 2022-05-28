@@ -8,3 +8,4 @@ Array
 7. prefix sum part 2
 
 Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
+https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/#algo4
