@@ -1,4 +1,4 @@
-Array
+# Array
 1. trapping rain water
 2. maximum sum subarray
 3. maximum circular sub array sum
@@ -8,4 +8,17 @@ Array
 7. prefix sum part 2
 
 Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
-https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/#algo4
+
+
+# String
+https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
+
+# Tree
+https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
+
+# DP
+https://www.geeksforgeeks.org/top-50-dynamic-programming-coding-problems-for-interviews/
+
+
+# Interview
+https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
