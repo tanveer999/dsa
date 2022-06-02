@@ -9,6 +9,10 @@
 
 Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
 
+# Searching
+- search in sorted rotated array
+- square root
+- search in infinite sized array
 
 # String
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
