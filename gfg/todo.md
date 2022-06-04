@@ -15,6 +15,8 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 - search in infinite sized array
 - meridian of 2 sorted array
 - repeating element (floyd's slow-fast algo)
+- allocate minimum pages
+
 # String
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
