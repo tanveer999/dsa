@@ -17,6 +17,10 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 - repeating element (floyd's slow-fast algo)
 - allocate minimum pages
 
+# Sorting
+- merge sort
+- quick sort
+
 # String
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 

@@ -16,18 +16,25 @@ public class LomutoPartition {
     public static int lPartition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = low;
-        int temp;
         for(int j = low; j < high; j++) {
             if(arr[j] <= pivot) {
-                temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
+                // temp = arr[j];
+                // arr[j] = arr[i];
+                // arr[i] = temp;
+                swap(arr, i, j);
 
                 i++;
             }
         }
-        arr[high] = arr[i];
-        arr[i] = pivot;
+        // arr[high] = arr[i];
+        // arr[i] = pivot;
+        swap(arr, i, high);
         return i;
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }
