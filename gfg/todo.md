@@ -20,6 +20,8 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 # Sorting
 - merge sort
 - quick sort
+- kth smallest element
+- chocolate distribution problem
 
 # String
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
