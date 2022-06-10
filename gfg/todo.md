@@ -22,6 +22,9 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 - quick sort
 - kth smallest element
 - chocolate distribution problem
+- merge overlapping intervals
+- meeting the maximum guests
+- radix sort
 
 # String
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
@@ -35,3 +38,6 @@ https://www.geeksforgeeks.org/top-50-dynamic-programming-coding-problems-for-int
 
 # Interview
 https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
+
+# check
+https://leetcode.com/discuss/study-guide/2001789/collections-of-important-string-questions-pattern

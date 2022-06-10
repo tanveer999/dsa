@@ -11,8 +11,11 @@ public class Practice {
     //        System.out.println(rand.nextInt(6, 10));
     //    }
 
-    int[] arr = {5, 1, 3, 2, 9, 7};
-    Arrays.sort(arr, 1, arr.length);
-    System.out.println(Arrays.toString(arr));
+    // int[] arr = {5, 1, 3, 2, 9, 7};
+    // Arrays.sort(arr, 1, arr.length);
+    // System.out.println(Arrays.toString(arr));
+        int[][] arr = {{7,9}, {6,10}, {4,5}, {1,3}, {2,4}};
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
