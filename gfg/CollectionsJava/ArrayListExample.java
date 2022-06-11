@@ -1,5 +1,6 @@
 package CollectionsJava;
 
+import java.util.Iterator;
 import java.util.ArrayList;
 
 public class ArrayListExample {
@@ -13,7 +14,14 @@ public class ArrayListExample {
             arr.add(i);
         }
 
-        arr.add(5, 6);
+        System.out.println("Using Iterator: ");
+        Iterator<Integer> itr = arr.iterator();
+        while(itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+
+        arr.add(5, 6); // index of current element or size()
+        // arr.add(7, 7); // IndexOutOfBoundsException
 
         // output
         // [1, 2, 3, 4, 5, 6] and Size is: 6
