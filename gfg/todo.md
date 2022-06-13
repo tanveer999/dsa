@@ -26,6 +26,10 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 - meeting the maximum guests
 - radix sort
 
+# Hashing
+- Subarray with zero sum
+- Longest subarray with given sum
+
 # String
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
