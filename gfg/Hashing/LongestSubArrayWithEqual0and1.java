@@ -2,9 +2,9 @@ package Hashing;
 import java.util.HashMap;
 public class LongestSubArrayWithEqual0and1 {
     public static void main(String[] args) {
-        // int[] arr = {0,0,1,1,1,1,1,0};
+        int[] arr = {0,0,1,1,1,1,1,0};
         // int[] arr = {0,0,0,0};
-        int[] arr = {1,0,1,1,1,0,0};
+        // int[] arr = {1,0,1,1,1,0,0};
         System.out.println(findCount1(arr));
         System.out.println(findCount2(arr));
     }

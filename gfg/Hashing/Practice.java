@@ -48,5 +48,16 @@ public class Practice {
         hm.put(1, 1);
         hm.put(1,2);
         System.out.println(hm);
+
+        hm.put(2,3);
+
+        for(Integer item : hm.keySet()) {
+            System.out.println(item);
+        }
+
+        System.out.println("-----------------------------------------");
+
+        int[] arr = new int[5];
+        System.out.println(Arrays.toString(arr));
     }
 }

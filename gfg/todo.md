@@ -29,6 +29,8 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 # Hashing
 - Subarray with zero sum
 - Longest subarray with given sum
+- Longest consecutive subsequence
+- more than n/k occurences(try with moore's voting algorithm when n is large and k is small)
 
 # String
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
