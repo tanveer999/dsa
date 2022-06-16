@@ -33,6 +33,7 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 - more than n/k occurences(try with moore's voting algorithm when n is large and k is small)
 
 # String
+- leftmost repeating character
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
 # Tree

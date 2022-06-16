@@ -8,5 +8,10 @@ public class Practice {
         System.out.println((int)str.charAt(0)); // 97
         System.out.println((int)'A'); // 65 (note: "A" gives erroe: string cannot be converted to int)
         System.out.println((char)255);
+
+        System.out.println('a' * 2);
+        System.out.println('a' * (int)Math.pow(5,2));
+
+        System.out.println('A' + "b");
     }
 }
