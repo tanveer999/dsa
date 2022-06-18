@@ -24,5 +24,7 @@ public class Practice {
         System.out.println(Arrays.equals(a1,a2)); // true
         System.out.println(Arrays.equals(a1,a3)); // flase
         System.out.println(AnagramSearch.CHAR);
+
+        str = "abcd";
     }
 }
