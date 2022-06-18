@@ -1,5 +1,8 @@
 package Strings;
 
+import java.util.Arrays;
+import Strings.AnagramSearch;
+
 public class Practice {
     public static void main(String[] args) {
         String str = "abcd";
@@ -13,5 +16,13 @@ public class Practice {
         System.out.println('a' * (int)Math.pow(5,2));
 
         System.out.println('A' + "b");
+
+        int[] a1 = {0,0,0};
+        int[] a2 = {0,0,0};
+        int[] a3 = {1,0,0};
+        double[] a4 = {1.0,0,0};
+        System.out.println(Arrays.equals(a1,a2)); // true
+        System.out.println(Arrays.equals(a1,a3)); // flase
+        System.out.println(AnagramSearch.CHAR);
     }
 }

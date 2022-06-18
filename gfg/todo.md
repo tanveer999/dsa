@@ -1,3 +1,6 @@
+# Recursion
+- permutation
+
 # Array
 1. trapping rain water
 2. maximum sum subarray
@@ -34,6 +37,9 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 
 # String
 - leftmost repeating character
+- rabin-karp algorithm
+- kmp algo algorithm
+- check if strings are rotation
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
 # Tree

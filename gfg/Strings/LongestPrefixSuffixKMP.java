@@ -3,8 +3,37 @@ import java.util.Arrays;
 public class LongestPrefixSuffixKMP {
     public static void main(String[] args) {
         String str = "ababc";
+        str = "aabaaab";
         int[] lps = findLps(str);
+        int[] lps1 = findLpsEfficient(str);
         System.out.println(Arrays.toString(lps));
+        System.out.println(Arrays.toString(lps1));
+    }
+
+    static int[] findLpsEfficient(String str) {
+        int[] lps = new int[str.length()];
+        int len = 0, i = 1;
+        
+        while(i < str.length()) {
+            if(str.charAt(i) == str.charAt(len)) {
+                len++;
+                lps[i] = len;
+                i++;
+            } else {
+                if(len == 0) {
+                    lps[i] = 0;
+                    i++;
+                } else {
+                    if(len == 0) {
+                        lps[i] = len;
+                        i++;
+                    } else {
+                        len = lps[len - 1];
+                    }
+                }
+            }
+        }
+        return lps;
     }
 
     static int[] findLps(String str) {
