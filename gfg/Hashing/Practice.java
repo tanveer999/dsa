@@ -24,8 +24,9 @@ public class Practice {
 
         for(int i = 0; i < p.length; i++) {
             p[i] = new Point();
-            p[i].x = rand.nextInt(0, 10);
-            p[i].y = rand.nextInt(10, 20);
+            // p[i].x = rand.nextInt(0, 10);
+            // p[i].y = rand.nextInt(10, 20);
+            // p[i].x = rand.nextInt(0, 10);
         }
 
         for(Point point : p) {
