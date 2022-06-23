@@ -41,6 +41,7 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 - kmp algo algorithm
 - check if strings are rotation
 - lexicographic rank of a string
+- longest substring with distinct character
 
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
