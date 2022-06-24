@@ -45,7 +45,7 @@ public class SimpleLinkedList {
         head = insertAtGivenPosition(50, 1, head);
         printList(head);
 
-        int key = 60;
+        int key = 50;
         System.out.println(searchNode(head, key));
         System.out.println(searchNodeRecursive(head, key, 1));
     }
