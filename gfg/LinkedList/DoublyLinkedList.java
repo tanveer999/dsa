@@ -42,6 +42,38 @@ public class DoublyLinkedList {
 
         head = reverseDl(head);  
         printList(head);
+
+        // head = null;
+        // head = insertAtBeginning(1, head);
+        head = deleteHead(head);
+        printList(head);
+
+        // head = null;
+        // head = insertAtBeginning(1, head);
+        head = deleteLastNode(head);
+        printList(head);
+    }
+
+    static Node1 deleteLastNode(Node1 head) {
+        if(head == null || head.next == null) {
+            return null;
+        }
+
+        Node1 current = head;
+        while(current.next.next != null) {
+            current = current.next;
+        }
+        current.next = null;
+        return head;
+    }
+
+    static Node1 deleteHead(Node1 head) {
+        if(head == null || head.next == null){
+            return null;
+        }
+        head = head.next;
+        head.previous = null;
+        return head;
     }
 
     static Node1 reverseDl(Node1 head) {
