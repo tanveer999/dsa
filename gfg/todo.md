@@ -45,6 +45,9 @@ Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-
 
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
+# LinkedList
+1. Implement double and circular linked list with tail pointer
+
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 

@@ -26,28 +26,113 @@ public class SimpleLinkedList {
 
         // insert at beginning
         Node head = null;
-        head = insertAtBeginning(10, head);
-        head = insertAtBeginning(20, head);
-        head = insertAtBeginning(30, head);
-        head = insertAtBeginning(40, head);
+        // head = insertAtBeginning(10, head);
+        // head = insertAtBeginning(20, head);
+        // head = insertAtBeginning(30, head);
+        // head = insertAtBeginning(40, head);
+        // printList(head);
+
+        // head = insertAtEnd(50, head);
+        // printList(head);
+
+        // head = DeleteFirstNode(head);
+        // // head = null;
+        // printList(head);
+
+        // DeleteLastNode(head);
+        // printList(head);
+
+        // head = insertAtGivenPosition(50, 1, head);
+        // printList(head);
+
+        // int key = 50;
+        // System.out.println(searchNode(head, key));
+        // System.out.println(searchNodeRecursive(head, key, 1));
+
+        head = null;
+        head = insertAtEnd(10, head);
+        head = insertAtEnd(20, head);
+        head = insertAtEnd(30, head);
+        head = insertAtEnd(40, head);
         printList(head);
 
-        head = insertAtEnd(50, head);
-        printList(head);
+        // int item = 5;
+        // head = sortedInsert(item, head);
+        // printList(head);
 
-        head = DeleteFirstNode(head);
-        // head = null;
-        printList(head);
+        printMiddleItem(head);
+        printMiddleItem1(head);
+    }
 
-        DeleteLastNode(head);
-        printList(head);
+    // O(n) 1 traversal (slow fast pointer)
+    static void printMiddleItem1(Node head) {
+        Node fast = head, slow = head;
 
-        head = insertAtGivenPosition(50, 1, head);
-        printList(head);
+        if(head == null) {
+            return;
+        }
+        if(head.next == null) {
+            System.out.println(head.data);
+            return;
+        }
 
-        int key = 50;
-        System.out.println(searchNode(head, key));
-        System.out.println(searchNodeRecursive(head, key, 1));
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            
+            fast = fast.next.next;
+        }
+        System.out.println(slow.data);
+    }
+
+    // O(n)
+    private static void printMiddleItem(Node head) {
+        int count = 1;
+        if(head == null)
+            return;
+        
+        Node current = head;
+        while(current.next !=null) {
+            count++;
+            current = current.next;
+        }
+
+        int mid = count / 2;
+
+        int currentCount = 0;
+
+        current = head;
+
+        while(current != null) {
+            if(currentCount == mid) {
+                System.out.println(current.data);
+                return;
+            }
+            currentCount++;
+            current = current.next;
+        }
+    }
+
+    static Node sortedInsert(int item, Node head) {
+        Node newNode = new Node(item);
+
+        if(head == null) {
+            return newNode;
+        }
+
+        if(item < head.data) {
+            newNode.next = head;
+            return newNode;
+        }
+
+        Node current = head;
+
+        while(current.next.data < item && current.next != null) {
+            current = current.next;
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
+        return head;
     }
 
     static int searchNodeRecursive(Node current, int key, int count) {
