@@ -47,6 +47,8 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
 # LinkedList
 1. Implement double and circular linked list with tail pointer
+2. find middle of linked list
+3. nth node from end of linked list
 
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/

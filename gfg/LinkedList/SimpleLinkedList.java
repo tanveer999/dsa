@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.ArrayList;
+
 class Node {
     int data;
     Node next;
@@ -50,8 +52,8 @@ public class SimpleLinkedList {
         // System.out.println(searchNodeRecursive(head, key, 1));
 
         head = null;
-        head = insertAtEnd(10, head);
-        head = insertAtEnd(20, head);
+        // head = insertAtEnd(10, head);
+        // head = insertAtEnd(20, head);
         head = insertAtEnd(30, head);
         head = insertAtEnd(40, head);
         printList(head);
@@ -60,8 +62,54 @@ public class SimpleLinkedList {
         // head = sortedInsert(item, head);
         // printList(head);
 
-        printMiddleItem(head);
-        printMiddleItem1(head);
+        // printMiddleItem(head);
+        // printMiddleItem1(head);
+
+        head = reverse(head);
+        printList(head);
+
+        head = reverse1(head);
+        printList(head);
+    }
+
+    // one traversal
+    static Node reverse1(Node head) {
+        if(head == null || head.next == null)   
+            return head;
+        
+        Node prev = null, current = head, next = head.next;
+
+        while(current != null) {
+            current.next = prev;
+            prev = current;
+            current = next;
+            if(current == null) 
+                break;
+            next = current.next;
+        }
+        return prev;
+    }
+
+    // using ArrayList
+    // two traversal and O(n) auxillary space
+    static Node reverse(Node head) {
+        if(head == null || head.next == null)  
+            return head;
+        
+        ArrayList<Integer> arr = new ArrayList<>();
+        Node current = head;
+        while(current != null) {
+            arr.add(current.data);
+            current = current.next;
+        }   
+
+        current = head;
+        int count = arr.size();
+        for(int i = count - 1 ; i >= 0; i--) {
+            current.data = arr.get(i);
+            current = current.next;
+        }
+        return head;
     }
 
     // O(n) 1 traversal (slow fast pointer)
