@@ -54,22 +54,54 @@ public class SimpleLinkedList {
         head = null;
         // head = insertAtEnd(10, head);
         // head = insertAtEnd(20, head);
-        head = insertAtEnd(30, head);
-        head = insertAtEnd(40, head);
+        // head = insertAtEnd(20, head);
+        // head = insertAtEnd(30, head);
+        // head = insertAtEnd(30, head);
+        // head = insertAtEnd(30, head);
+        head = insertAtEnd(5, head);
+        head = insertAtEnd(10, head);
+        head = insertAtEnd(15, head);
+        head = insertAtEnd(20, head);
         printList(head);
 
         // int item = 5;
         // head = sortedInsert(item, head);
+        // head = sortedInsert(10, head);
+        // head = sortedInsert(20, head);
+        // head = sortedInsert(20, head);
+        // head = sortedInsert(30, head);
+        // head = sortedInsert(30, head);
+        // head = sortedInsert(30, head);
+
         // printList(head);
 
         // printMiddleItem(head);
         // printMiddleItem1(head);
 
-        head = reverse(head);
-        printList(head);
+        // head = reverse(head);
+        // printList(head);
 
-        head = reverse1(head);
+        // head = reverse1(head);
+        // printList(head);
+
+        head = removeDuplicatesFromSortedList(head);
         printList(head);
+    }
+
+    static Node removeDuplicatesFromSortedList(Node head) {
+        if(head == null)
+            return null;
+        
+        Node current = head;
+
+        while(current != null && current.next != null) {
+            if(current.data != current.next.data) {
+                current = current.next;
+            } else {
+                current.next = current.next.next;
+            }
+        }
+        return head;
     }
 
     // one traversal
