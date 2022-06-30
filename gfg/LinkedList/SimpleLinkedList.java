@@ -1,6 +1,7 @@
 package LinkedList;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 class Node {
     int data;
@@ -14,20 +15,24 @@ class Node {
 
 public class SimpleLinkedList {
     public static void main(String[] args) {
-        // Node head = new Node(1);
+        Node head = new Node(1);
+        // head.next = head;
         // Node n1 = new Node(2);
         // Node n2 = new Node(3);
         // Node n3 = new Node(4);
         // head.next = n1;
         // n1.next = n2;
         // n2.next = n3;
-
+        // n3.next = n1;
+        // detectLoop(head);
+        // detectLoop1(head);
+        // removeLoop(head);
         // // head = null;
         // printList(head);
         // printListRecursive(head);
 
         // insert at beginning
-        Node head = null;
+        // Node head = null;
         // head = insertAtBeginning(10, head);
         // head = insertAtBeginning(20, head);
         // head = insertAtBeginning(30, head);
@@ -52,18 +57,19 @@ public class SimpleLinkedList {
         // System.out.println(searchNodeRecursive(head, key, 1));
 
         head = null;
-        // head = insertAtEnd(10, head);
-        // head = insertAtEnd(20, head);
-        // head = insertAtEnd(20, head);
-        // head = insertAtEnd(30, head);
-        // head = insertAtEnd(30, head);
-        // head = insertAtEnd(30, head);
-        head = insertAtEnd(5, head);
         head = insertAtEnd(10, head);
-        head = insertAtEnd(15, head);
         head = insertAtEnd(20, head);
+        head = insertAtEnd(30, head);
+        head = insertAtEnd(40, head);
+        // head = insertAtEnd(50, head);
+        // head = insertAtEnd(5, head);
+        // head = insertAtEnd(4, head);
         printList(head);
-
+        head = pairSwap(head);
+        printList(head);
+        // evenOddNodes(head);
+        // head = segregate(head);
+        // printList(head);
         // int item = 5;
         // head = sortedInsert(item, head);
         // head = sortedInsert(10, head);
@@ -84,8 +90,98 @@ public class SimpleLinkedList {
         // head = reverse1(head);
         // printList(head);
 
-        head = removeDuplicatesFromSortedList(head);
+        // head = removeDuplicatesFromSortedList(head);
+        // printList(head);
+    }
+    // pairwise swap
+
+    static Node pairSwap(Node head) {
+        if(head == null || head.next == null) 
+            return head;
+        
+        Node current = head.next.next;
+        Node prev = head;
+        head = head.next;
+        head.next = prev;
+
+        while(current != null  && current.next != null) {
+            prev.next = current.next;
+            prev = current;
+            Node nextNode = current.next.next;
+            current.next.next = current;
+            current = nextNode;
+        }
+        prev.next = current;
+        return head;
+    }
+
+    //even odd nodes segregation
+    static void evenOddNodes(Node head) {
+        if(head == null)
+            return;
+
+        Node current = head, even = head;
+
+        while(current != null) {
+            if(current.data % 2 != 0) {
+                current = current.next;
+            } else {
+                int temp = current.data;
+                current.data = even.data;
+                even.data = temp;
+                even = even.next;
+                current = current.next;
+            }
+        }
         printList(head);
+    }
+
+    // remove loop
+
+    static void removeLoop(Node head) {
+        HashSet<Node> hs = new HashSet<>();
+        Node current = head;
+
+        while(current != null){ 
+            if(hs.contains(current.next)){
+                current.next = null;
+                break;
+            } else {
+                hs.add(current);
+                current = current.next;
+            }
+        }
+        printList(head);
+    }
+
+    // floyd cycle detection
+    static void detectLoop1(Node head) {
+        Node slow = head, fast = head;
+
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast) {
+                System.out.println("Loop: yes");
+                return;
+            }
+        }
+        System.out.println("Loop: No");
+    }
+    static void detectLoop(Node head) {
+        HashSet<Node> hs = new HashSet<>();
+
+        Node current = head;
+
+        while(current!= null) {
+            if(hs.contains(current)) {
+                System.out.println("loops: yes");
+                return;
+            }
+            hs.add(current);
+            current = current.next;
+        }
+        System.out.println("Loops: no");
     }
 
     static Node removeDuplicatesFromSortedList(Node head) {

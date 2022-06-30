@@ -50,6 +50,11 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 2. find middle of linked list
 3. nth node from end of linked list
 4. reverse linked list(try recursively)
+5. reverse linked list in groups
+6. detect loop
+7. detect and remove loop
+8. even odd segregation
+9. pairwise swap of linked list
 
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
