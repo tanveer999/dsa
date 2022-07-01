@@ -55,6 +55,7 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 7. detect and remove loop
 8. even odd segregation
 9. pairwise swap of linked list
+10. lru cache
 
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
