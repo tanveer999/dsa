@@ -1,6 +1,7 @@
 package LinkedList;
 
 import java.util.ArrayList;
+import java.util.Currency;
 import java.util.HashSet;
 
 class Node {
@@ -15,7 +16,7 @@ class Node {
 
 public class SimpleLinkedList {
     public static void main(String[] args) {
-        Node head = new Node(1);
+        // Node head = new Node(1);
         // head.next = head;
         // Node n1 = new Node(2);
         // Node n2 = new Node(3);
@@ -56,17 +57,17 @@ public class SimpleLinkedList {
         // System.out.println(searchNode(head, key));
         // System.out.println(searchNodeRecursive(head, key, 1));
 
-        head = null;
-        head = insertAtEnd(10, head);
-        head = insertAtEnd(20, head);
-        head = insertAtEnd(30, head);
-        head = insertAtEnd(40, head);
+        // head = null;
+        // head = insertAtEnd(10, head);
+        // head = insertAtEnd(20, head);
+        // head = insertAtEnd(30, head);
+        // head = insertAtEnd(40, head);
         // head = insertAtEnd(50, head);
         // head = insertAtEnd(5, head);
         // head = insertAtEnd(4, head);
-        printList(head);
-        head = pairSwap(head);
-        printList(head);
+        // printList(head);
+        // head = pairSwap(head);
+        // printList(head);
         // evenOddNodes(head);
         // head = segregate(head);
         // printList(head);
@@ -92,6 +93,127 @@ public class SimpleLinkedList {
 
         // head = removeDuplicatesFromSortedList(head);
         // printList(head);
+
+        // Node head1 = null;
+        // head1 = insertAtEnd(10, head1);
+        // head1 = insertAtEnd(20, head1);
+        // head1 = insertAtEnd(30, head1);
+        // head1 = insertAtEnd(40, head1);
+
+        // Node head2 = null;
+        // head2 = insertAtEnd(5, head2);
+        // head2 = insertAtEnd(15, head2);
+        // head2 = insertAtEnd(17, head2);
+        // head2 = insertAtEnd(18, head2);
+        // head2 = insertAtEnd(35, head2);
+        // printList(head1);
+        // printList(head2);
+
+        // Node head = mergeTwoSortedLL(head2, head1);
+        // printList(head);
+
+        Node head1 = null;
+        head1 = insertAtEnd(10, head1);
+        head1 = insertAtEnd(20, head1);
+        head1 = insertAtEnd(30, head1);
+        head1 = insertAtEnd(30, head1);
+        head1 = insertAtEnd(20, head1);
+        head1 = insertAtEnd(10, head1);
+
+        // head1 = reverse2(head1);
+        // printList(head1);
+        System.out.println(palindrome(head1));
+    }
+    // palindrome
+    static boolean palindrome(Node head) {
+        if(head == null || head.next == null)
+            return true;
+
+        int count = 0;
+        for(Node current = head; current != null; current = current.next) {
+            count++;
+        }
+        int mid = (count - 1) / 2;
+        int index = 0;
+        Node current = head;
+
+        while(index < mid) {
+            current = current.next;
+            index++;
+        }
+        current = reverse2(current.next);
+        // printList(current);
+
+        Node start = head;
+
+        while(current != null) {
+            if(current.data == start.data){
+                current = current.next;
+                start = start.next;
+            }
+            else
+                return false;
+        }
+        return true;
+    }
+
+    //reverse
+    static Node reverse2(Node head) {
+        if(head == null || head.next == null)
+            return head;
+
+        Node current = head, prev = null;
+
+        while(current != null) {
+            Node next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
+    }
+
+    //merge two linked list
+
+    static Node mergeTwoSortedLL(Node head1, Node head2) {
+        if(head1 == null)
+            return head2;
+        if(head2 == null)
+            return head1;
+
+        Node a = head1;
+        Node b = head2;
+
+        Node tail, head;
+
+        if(head1.data < head2.data) {
+            head = head1;
+            tail = head1;
+            a = a.next;
+        } else {
+            head = head2;
+            tail = head2;
+            b = b.next;
+        }
+
+        while(a != null && b != null) {
+            if(b.data < a.data) {
+                tail.next = b;
+                tail = tail.next;
+                b = b.next;
+            } else {
+                tail.next = a;
+                tail = tail.next;
+                a = a.next;
+            }
+        }
+        if(a == null) {
+            tail.next = b;
+        }
+        if(b == null) {
+            tail.next = a;
+        }
+        return head;
     }
     // pairwise swap
 
