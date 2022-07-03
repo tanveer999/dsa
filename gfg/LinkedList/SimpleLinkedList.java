@@ -1,7 +1,6 @@
 package LinkedList;
 
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.HashSet;
 
 class Node {
