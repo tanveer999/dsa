@@ -57,6 +57,9 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 9. pairwise swap of linked list
 10. lru cache
 
+# Stacks
+1. Implement K stacks in an array
+
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 
