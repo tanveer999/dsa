@@ -59,6 +59,7 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
 # Stacks
 1. Implement K stacks in an array
+2. stock span problem
 
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
