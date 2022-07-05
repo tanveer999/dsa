@@ -60,6 +60,12 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 # Stacks
 1. Implement K stacks in an array
 2. stock span problem
+3. largest rectangle area in histogram
+4. largest rectangle with all 1's
+5. design a stack with getmin()
+
+# Queue
+1. Implement stack using queue and queue using stack(check gfg practice for variations of this problem)
 
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
