@@ -25,6 +25,7 @@ public class ArrayListExample {
 
         // output
         // [1, 2, 3, 4, 5, 6] and Size is: 6
+        // arr.add(0,0); // add element and doesn't replace
         System.out.println(arr + " and Size is: " + arr.size());
 
         // output

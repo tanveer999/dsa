@@ -68,6 +68,9 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 1. Implement stack using queue and queue using stack(check gfg practice for variations of this problem)
 2. generate numbers with given digits
 
+# Deque
+1. Implementation using circular array
+
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 
