@@ -70,6 +70,7 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 
 # Deque
 1. Implementation using circular array
+2. first circular tour
 
 # Tree
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
