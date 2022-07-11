@@ -11,6 +11,8 @@ public class DequeExample {
         // dq.addLast(null); // cannot add null throws null pointer exception
         dq.addLast(2);
 
-        System.out.println(dq);
+        // dq.addLast(null);
+        // System.out.println(dq);
+
     }
 }
