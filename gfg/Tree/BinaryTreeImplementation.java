@@ -87,6 +87,142 @@ public class BinaryTreeImplementation {
         root.right = new Node(2);
         root.right.left = new Node(2);
         System.out.println(childrenSumProperty(root));
+
+        
+        System.out.println("check for balanced");
+
+        // root = null;
+        // root = new Node(18);
+        // root.left = new Node(4);
+        // root.right = new Node(6);
+        // root.left.left = new Node(1);
+        // root.left.right = new Node(4);
+
+        // root.right.right = new Node(7);
+        // root.right.right.left = new Node(7);
+
+        int diff = checkForBalanced(root);
+        if(diff == -1) {
+            System.out.println("No");
+        } else {
+            System.out.println("Yes");
+        }
+
+        System.out.println("maximum width");
+
+        // root = null;
+        // root = new Node(10);
+        // root.left = new Node(20);
+        // root.right = new Node(30);
+
+        // root.left.left = new Node(40);
+        // root.left.left.left = new Node(80);
+
+        // root.right.left = new Node(50);
+        // root.right.right = new Node(60);
+
+        root = null;
+        root = new Node(10);
+        root.left = new Node(20);
+        root.right =  new Node(30);
+        root.left.left = new Node(40);
+        root.left.right = new Node(30);
+        root.right.left = new Node(50);
+        root.right.right = new Node(50);
+
+        System.out.println(maximumWidth(root));
+
+        root = null;
+        root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+        root.right.left = new Node(6);
+        root.right.right = new Node(7);
+        root.left.left.left = new Node(8);
+        root.left.left.right = new Node(9);
+        root.left.right.right = new Node(10);
+        spiralTraversal(root);
+    }
+
+    static void spiralTraversal(Node root) {
+        if(root == null) return;
+        Deque<Node> leftq = new LinkedList<>();
+        Deque<Node> rightq = new LinkedList<>();
+
+        int countLeft, countRight;
+        boolean flag;
+
+        leftq.add(root);
+        flag = true;
+
+        while(!leftq.isEmpty() || !rightq.isEmpty()) {
+            countLeft = leftq.size();
+            countRight = rightq.size();
+
+            if(flag) {
+                for(int i = 0 ; i < countLeft ; i++) {
+                    Node curr = leftq.removeLast();
+                    System.out.print(curr.data +  " ");
+                    if(curr.left != null) rightq.addLast(curr.left);
+                    if(curr.right != null) rightq.addLast(curr.right);
+                }
+            } else {
+                for(int i = 0 ; i < countRight; i++) {
+                    Node curr = rightq.removeLast();
+                    System.out.print(curr.data + " ");
+                    if(curr.right != null) leftq.addLast(curr.right);
+                    if(curr.left != null) leftq.addLast(curr.left);
+                }
+            }
+            flag = !flag;
+        }
+    }
+
+    static int maximumWidth(Node root) {
+        Queue<Node> q = new LinkedList<>();
+
+        if(root == null)
+            return 0;
+        
+        q.add(root);
+        q.add(null);
+
+        int max = 1;
+        while(q.size() > 1) {
+            Node curr = q.remove();
+            if(curr == null){
+                max = Math.max(max, q.size());
+                q.add(null);
+                continue;
+            }
+            if(curr.left != null)
+                q.add(curr.left);
+            if(curr.right != null)
+                q.add(curr.right);
+        }
+        return max;
+    }
+
+    static int checkForBalanced(Node root) {
+        if(root ==  null) {
+            return 0;
+        }
+
+        int lh = checkForBalanced(root.left);
+        if(lh == -1) return -1;
+
+        int rh = checkForBalanced(root.right);
+        if(rh == -1) return -1;
+
+        int diff = Math.abs(lh - rh);
+
+        if(diff > 1) {
+            return -1;
+        } else {
+            return Math.max(lh,rh) + 1;
+        }
     }
 
     static boolean childrenSumProperty(Node root) {
