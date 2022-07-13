@@ -80,6 +80,7 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 5. convert binary tree to doubly linked list
 6. construct binary tree from inorder and preorder (binary tree from inorder and postorder possible)(binary tree from postorder and preorder not possible)
 7. tree traversal spiral form
+8. diameter of a binary tree and (after this)
 
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 

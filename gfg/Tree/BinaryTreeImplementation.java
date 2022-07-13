@@ -154,7 +154,7 @@ public class BinaryTreeImplementation {
         int countLeft, countRight;
         boolean flag;
 
-        leftq.add(root);
+        leftq.addLast(root);
         flag = true;
 
         while(!leftq.isEmpty() || !rightq.isEmpty()) {
