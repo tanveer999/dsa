@@ -146,6 +146,35 @@ public class BinaryTreeImplementation {
         spiralTraversal(root);
     }
 
+    static Node delete(Node root, int key) {
+        if(root == null)
+            return null;
+
+        if(key < root.data)
+            root.left = delete(root.left, key);
+        else if (key > root.data)
+            root.right = delete(root.right, key);
+        else {
+            if(root.left == null) return root.right;
+            else if(root.right == null) return root.left;
+            else {
+                Node successor = successor(root);
+                root.data = successor.data;
+                root.right = delete(root.right, successor.data);
+            }
+        }
+        return root;
+    }
+    static Node successor(Node root) {
+        Node curr = root.right;
+        while(curr != null && root.left != null)
+            curr = root.left;
+        
+        return curr;
+    }
+
+
+
     static void spiralTraversal(Node root) {
         if(root == null) return;
         Deque<Node> leftq = new LinkedList<>();

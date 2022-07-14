@@ -82,6 +82,9 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 7. tree traversal spiral form
 8. diameter of a binary tree and (after this)
 
+# Binary Search Tree
+1. insert
+
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 
 # DP
