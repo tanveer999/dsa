@@ -9,6 +9,7 @@
 5. minimum consecutive flips
 6. solve atleast 10 sliding window technique problems(search in gfg)
 7. prefix sum part 2
+8 find kth smallest element(median-of-median)
 
 Top 50 Array Coding Problems for Interviews - https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
 
@@ -81,9 +82,18 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 6. construct binary tree from inorder and preorder (binary tree from inorder and postorder possible)(binary tree from postorder and preorder not possible)
 7. tree traversal spiral form
 8. diameter of a binary tree and (after this)
+9. iterative inorder
 
 # Binary Search Tree
 1. insert
+2. delete
+3. AVL tree
+4. red black tree(java TreeMap and TreeSet uses Red Black tree)
+    ```
+    So if your application involves many frequent insertions and deletions, then Red Black trees should be preferred. And if the insertions and deletions are less frequent and search is the more frequent operation, then AVL tree should be preferred over Red Black Tree.
+    ```
+5. rewatch application of bst
+
 
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 

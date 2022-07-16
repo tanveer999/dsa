@@ -42,6 +42,95 @@ public class BinarySearchTree {
         root = insert(root, 18);
         root = insert(root, 20);
         inorderTraversal(root);
+
+        System.out.println();
+        System.out.println("delete node is BST");
+        root = null;
+        delete(root, 30);
+
+        System.out.println();
+        System.out.println("floor node");
+        root = null;
+        root = new Node1(10);
+        root.left = new Node1(5);
+        root.right = new Node1(15);
+        root.right.left = new Node1(12);
+        root.right.right = new Node1(30);
+        Node1 floorNode = floor(root, 100);
+        if(floorNode == null) System.out.println(floorNode);
+        else System.out.println(floorNode.data);
+
+        Node1 ceilNode = ceil(root, 14);
+        if(ceilNode == null) System.out.println(ceilNode);
+        else System.out.println(ceilNode.data);
+    }
+
+    static Node1 ceil(Node1 root, int key) {
+        if(root == null) return null;
+
+        Node1 res = null;
+
+        while(root != null) {
+            if(root.data == key) {
+                return root;
+            }
+            if(key > root.data) {
+                root = root.right;
+            } else {
+                res = root;
+                root = root.left;
+            }
+        }
+        return res;
+    }
+
+    static Node1 floor(Node1 root, int key) {
+        if(root == null) return null;
+
+        Node1 curr = root;
+        Node1 floorNode = null;
+
+        while(curr != null) {
+            if(floorNode == null && curr.data < key){ 
+                floorNode = curr;
+            }
+            if(floorNode != null && curr.data <= key && curr.data > floorNode.data) {
+                floorNode = curr;
+            }
+            if(key > curr.data) {
+                curr = curr.right;
+            } else {
+                curr = curr.left;
+            }
+        }
+        return floorNode;
+    }
+
+    static Node1 delete(Node1 root, int key) {
+        if(root == null)
+            return null;
+
+        if(key < root.data)
+            root.left = delete(root.left, key);
+        else if (key > root.data)
+            root.right = delete(root.right, key);
+        else {
+            if(root.left == null) return root.right;
+            else if(root.right == null) return root.left;
+            else {
+                Node1 successor = successor(root);
+                root.data = successor.data;
+                root.right = delete(root.right, successor.data);
+            }
+        }
+        return root;
+    }
+    static Node1 successor(Node1 root) {
+        Node1 curr = root.right;
+        while(curr != null && root.left != null)
+            curr = root.left;
+        
+        return curr;
     }
 
     static Node1 insert(Node1 root, int key) {

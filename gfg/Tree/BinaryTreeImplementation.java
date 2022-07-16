@@ -144,36 +144,49 @@ public class BinaryTreeImplementation {
         root.left.left.right = new Node(9);
         root.left.right.right = new Node(10);
         spiralTraversal(root);
+        System.out.println();
+        iterativeInorder(root);
+        inorderTraversal(root);
+        System.out.println();
+        iterativePreOrder(root);
+        preorderTraversal(root);
     }
 
-    static Node delete(Node root, int key) {
-        if(root == null)
-            return null;
+    static void iterativePreOrder(Node root) {
+        if(root == null) return;
 
-        if(key < root.data)
-            root.left = delete(root.left, key);
-        else if (key > root.data)
-            root.right = delete(root.right, key);
-        else {
-            if(root.left == null) return root.right;
-            else if(root.right == null) return root.left;
-            else {
-                Node successor = successor(root);
-                root.data = successor.data;
-                root.right = delete(root.right, successor.data);
+        Deque<Node> stack = new ArrayDeque<>();
+
+        while(root != null || !stack.isEmpty()) {
+            while(root != null) {
+                stack.addLast(root);
+                System.out.print(root.data + " ");
+                root = root.left;
             }
+            root = stack.removeLast();
+            root = root.right;
         }
-        return root;
-    }
-    static Node successor(Node root) {
-        Node curr = root.right;
-        while(curr != null && root.left != null)
-            curr = root.left;
-        
-        return curr;
+        System.out.println();
     }
 
+    static void iterativeInorder(Node root) {
+        if(root == null) return;
 
+        Node curr = root;
+        Deque<Node> stack = new ArrayDeque<>();
+
+        while(curr != null || !stack.isEmpty()) {
+            while(curr != null) {
+                stack.addLast(curr);
+                curr = curr.left;
+            }
+            curr = stack.removeLast();
+            System.out.print(curr.data + " ");
+
+            curr = curr.right;
+        }
+        System.out.println();
+    }
 
     static void spiralTraversal(Node root) {
         if(root == null) return;
