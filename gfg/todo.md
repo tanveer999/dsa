@@ -93,7 +93,9 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
     So if your application involves many frequent insertions and deletions, then Red Black trees should be preferred. And if the insertions and deletions are less frequent and search is the more frequent operation, then AVL tree should be preferred over Red Black Tree.
     ```
 5. rewatch application of bst
-
+6. find kth smallest in bst
+7. check for bst
+8. fix a bst with 2 nodes swapped
 
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 

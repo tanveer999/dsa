@@ -1,5 +1,8 @@
 package Tree;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 class Node1 {
     int data;
     Node1 left;
@@ -20,7 +23,6 @@ public class BinarySearchTree {
         // inorderTraversal(root);
         // System.out.println();
 
-    
         System.out.println("Search in BST");
         root = null;
         root = new Node1(15);
@@ -57,24 +59,76 @@ public class BinarySearchTree {
         root.right.left = new Node1(12);
         root.right.right = new Node1(30);
         Node1 floorNode = floor(root, 100);
-        if(floorNode == null) System.out.println(floorNode);
-        else System.out.println(floorNode.data);
+        if (floorNode == null)
+            System.out.println(floorNode);
+        else
+            System.out.println(floorNode.data);
 
         Node1 ceilNode = ceil(root, 14);
-        if(ceilNode == null) System.out.println(ceilNode);
-        else System.out.println(ceilNode.data);
+        if (ceilNode == null)
+            System.out.println(ceilNode);
+        else
+            System.out.println(ceilNode.data);
+
+        System.out.println("check for bst");
+
+        root = null;
+        root = new Node1(20);
+        root.left = new Node1(8);
+        root.right = new Node1(30);
+        root.right.left = new Node1(18);
+        root.right.right = new Node1(24);
+        System.out.println(CheckForBst(root));
+    }
+
+    static boolean CheckForBst(Node1 root) {
+        if (root == null)
+            return true;
+
+        //iterative
+        // Deque<Node1> stack = new ArrayDeque<>();
+        // while(root != null || !stack.isEmpty()) {
+
+        //     while(root.left != null) {
+        //         stack.push(root);
+        //         root = root.left;
+        //     }
+
+        //     if((root.left == null || root.left.data < root.data) &&
+        //         (root.right == null || root.right.data > root.data)) {
+        //             return true;
+        //         }
+        // }
+
+
+        // recursion   
+        boolean left, right;
+        CheckForBst(root.left);
+        if (root.left == null || root.left.data < root.data)
+            left = true;
+        else
+            left = false;
+
+        CheckForBst(root.right);
+        if(root.right == null || root.right.data > root.data)
+            right = true;
+        else 
+            right = false;
+        return left && right;
+
     }
 
     static Node1 ceil(Node1 root, int key) {
-        if(root == null) return null;
+        if (root == null)
+            return null;
 
         Node1 res = null;
 
-        while(root != null) {
-            if(root.data == key) {
+        while (root != null) {
+            if (root.data == key) {
                 return root;
             }
-            if(key > root.data) {
+            if (key > root.data) {
                 root = root.right;
             } else {
                 res = root;
@@ -85,19 +139,20 @@ public class BinarySearchTree {
     }
 
     static Node1 floor(Node1 root, int key) {
-        if(root == null) return null;
+        if (root == null)
+            return null;
 
         Node1 curr = root;
         Node1 floorNode = null;
 
-        while(curr != null) {
-            if(floorNode == null && curr.data < key){ 
+        while (curr != null) {
+            if (floorNode == null && curr.data < key) {
                 floorNode = curr;
             }
-            if(floorNode != null && curr.data <= key && curr.data > floorNode.data) {
+            if (floorNode != null && curr.data <= key && curr.data > floorNode.data) {
                 floorNode = curr;
             }
-            if(key > curr.data) {
+            if (key > curr.data) {
                 curr = curr.right;
             } else {
                 curr = curr.left;
@@ -107,16 +162,18 @@ public class BinarySearchTree {
     }
 
     static Node1 delete(Node1 root, int key) {
-        if(root == null)
+        if (root == null)
             return null;
 
-        if(key < root.data)
+        if (key < root.data)
             root.left = delete(root.left, key);
         else if (key > root.data)
             root.right = delete(root.right, key);
         else {
-            if(root.left == null) return root.right;
-            else if(root.right == null) return root.left;
+            if (root.left == null)
+                return root.right;
+            else if (root.right == null)
+                return root.left;
             else {
                 Node1 successor = successor(root);
                 root.data = successor.data;
@@ -125,55 +182,56 @@ public class BinarySearchTree {
         }
         return root;
     }
+
     static Node1 successor(Node1 root) {
         Node1 curr = root.right;
-        while(curr != null && root.left != null)
+        while (curr != null && root.left != null)
             curr = root.left;
-        
+
         return curr;
     }
 
     static Node1 insert(Node1 root, int key) {
         Node1 newNode = new Node1(key);
 
-        if(root == null)
+        if (root == null)
             return newNode;
-        
-        if(key < root.data)
+
+        if (key < root.data)
             root.left = insert(root.left, key);
-        else 
+        else
             root.right = insert(root.right, key);
         return root;
         // solution 1
         // if(root == null)
-        //     return newNode;
-        
+        // return newNode;
+
         // if(key < root.data) {
-        //     if(root.left != null)
-        //         insert(root.left, key);
-        //     else {
-        //         root.left = newNode;
-        //         return root;
-        //     }
+        // if(root.left != null)
+        // insert(root.left, key);
+        // else {
+        // root.left = newNode;
+        // return root;
+        // }
         // } else {
-        //     if(root.right != null)
-        //         insert(root.right, key);
-        //     else {
-        //         root.right = newNode;
-        //         return root;
-        //     }
+        // if(root.right != null)
+        // insert(root.right, key);
+        // else {
+        // root.right = newNode;
+        // return root;
+        // }
         // }
         // return root;
     }
 
     static boolean search(Node1 root, int key) {
-        if(root == null)
+        if (root == null)
             return false;
-        
-        if(key == root.data) {
+
+        if (key == root.data) {
             return true;
         }
-        if(key < root.data) {
+        if (key < root.data) {
             return search(root.left, key);
         } else {
             return search(root.right, key);
@@ -182,9 +240,9 @@ public class BinarySearchTree {
     }
 
     static void inorderTraversal(Node1 root) {
-        if(root == null)
+        if (root == null)
             return;
-        
+
         inorderTraversal(root.left);
         System.out.print(root.data + " ");
         inorderTraversal(root.right);
