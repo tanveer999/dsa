@@ -29,14 +29,18 @@ class Heap {
 public class HeapImplementation {
     public static void main(String[] args) {
         Heap heap = new Heap(10);
-        int[] temp = {40, 20, 30, 35, 25, 80, 32, 100, 70, 60};
+        int[] temp = {10, 20, 30, 40, 50, 35, 38, 45};
         for(int i = 0; i < temp.length; ++i) {
             heap.arr[i] = temp[i];
             heap.size++;
         }
         // int item = 12;
         // insert(heap, item);   
-        minHeapify(heap, 0);
+        // minHeapify(heap, 0);
+        // decreaseKey(heap, 3, 5);
+
+        System.out.println(Arrays.toString(heap.arr));
+        delete(heap, 3);
         System.out.println(Arrays.toString(heap.arr));
     }
 
@@ -44,6 +48,27 @@ public class HeapImplementation {
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;
+    }
+
+    static void buildHeap(Heap heap) {
+        for(int i = (heap.size - 2) / 2; i >= 0; --i) {
+            minHeapify(heap, i);
+        }
+    }
+
+    static void delete(Heap heap, int index) {
+        decreaseKey(heap, index, Integer.MIN_VALUE);
+        extractMin(heap);
+    }
+
+    static void decreaseKey(Heap heap, int index, int item) {
+        heap.arr[index] = item;
+
+        while(heap.arr[index] < heap.arr[heap.parent(index)]) {
+            swap(heap.arr, index, heap.parent(index));
+            index = heap.parent(index);
+        }
+
     }
 
     static int extractMin(Heap heap) {

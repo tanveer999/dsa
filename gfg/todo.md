@@ -97,6 +97,10 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 7. check for bst
 8. fix a bst with 2 nodes swapped
 
+# Heap
+1. build heap
+2. heap sort
+
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 
 # DP
