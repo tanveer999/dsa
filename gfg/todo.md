@@ -100,6 +100,7 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 # Heap
 1. build heap
 2. heap sort
+3. sort a k sorted array
 
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 
