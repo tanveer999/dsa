@@ -102,6 +102,8 @@ https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 2. heap sort
 3. sort a k sorted array
 4. k closest elements
+5. merge k sorted array
+6. median of a stream
 
 https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 
