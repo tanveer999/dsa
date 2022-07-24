@@ -150,6 +150,9 @@ public class BinaryTreeImplementation {
         System.out.println();
         iterativePreOrder(root);
         preorderTraversal(root);
+
+        System.out.println();
+        levelOrderTraversal(root, dq);
     }
 
     static void iterativePreOrder(Node root) {
