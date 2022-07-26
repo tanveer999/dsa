@@ -109,6 +109,10 @@ https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 
 # Graph
 1. bfs
+2. dfs
+3. find cycle
+4. shortest path unweighted graph
+5. topological sort (kahn bfs, dfs)
 
 # DP
 https://www.geeksforgeeks.org/top-50-dynamic-programming-coding-problems-for-interviews/
