@@ -9,18 +9,20 @@ import java.util.Queue;
 public class TopologicalSortKahnBfs {
     public static void main(String[] args) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        int v = 5;
+        int v = 6;
 
         for (int i = 0; i < v; i++) {
             adj.add(new ArrayList<Integer>());
 
         }
 
-        addEdgeDirected(adj, 0, 2);
-        addEdgeDirected(adj, 0, 3);
+        addEdgeDirected(adj, 0, 1);
+        addEdgeDirected(adj, 0, 4);
+        addEdgeDirected(adj, 1, 2);
+        addEdgeDirected(adj, 4, 2);
+        addEdgeDirected(adj, 4, 5);
         addEdgeDirected(adj, 2, 3);
-        addEdgeDirected(adj, 1, 3);
-        addEdgeDirected(adj, 1, 4);
+        addEdgeDirected(adj, 5, 3);
 
         topologicalSort(adj, v);
     }

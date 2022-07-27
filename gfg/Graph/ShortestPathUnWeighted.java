@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Queue;
 
-public class ShortestPath {
+public class ShortestPathUnWeighted {
     public static void main(String[] args) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         int v = 4;
