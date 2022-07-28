@@ -115,6 +115,10 @@ https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 5. topological sort (kahn bfs, dfs)
 6. shortest path in dag
 
+# Greedy 
+1. Fractional Knapsack
+2. Job Sequencing problem
+
 # DP
 https://www.geeksforgeeks.org/top-50-dynamic-programming-coding-problems-for-interviews/
 
