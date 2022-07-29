@@ -118,6 +118,7 @@ https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 # Greedy 
 1. Fractional Knapsack
 2. Job Sequencing problem
+3. Huffman algorithm
 
 # DP
 https://www.geeksforgeeks.org/top-50-dynamic-programming-coding-problems-for-interviews/
