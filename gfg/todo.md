@@ -121,6 +121,16 @@ https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 3. Huffman algorithm
 
 # DP
+1. Longest common subsequence(LCS)
+    LCS variations:
+        * Diff utility
+        * minimum insertions and deletion to convert s1 into s2
+        * shortest common supersequence
+        * longest palindromic subsequence
+        * longest repeating subsequence
+        * space optimized solution of lcs
+        * printing lcs
+2. 
 https://www.geeksforgeeks.org/top-50-dynamic-programming-coding-problems-for-interviews/
 
 
