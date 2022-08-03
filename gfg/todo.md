@@ -133,7 +133,7 @@ https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 2. coin change
 3. edit distance
 4. longest increasing subsequence
-5.
+5. Minimum jump to reach at end
 
 
 https://www.geeksforgeeks.org/top-50-dynamic-programming-coding-problems-for-interviews/
