@@ -135,6 +135,7 @@ https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 4. longest increasing subsequence
 5. Minimum jump to reach at end
 6. optimal strategy for a game
+7. minimum subset sum
 
 https://www.geeksforgeeks.org/top-50-dynamic-programming-coding-problems-for-interviews/
 

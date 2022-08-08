@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class SubsetSum {
     public static void main(String[] args) {
-        int[] arr = {2, 3, 7, 8, 10};
-        int sum = 33;
+        int[] arr = {1, 2, 7};
+        int sum = 10;
         
 
         long start, end;
@@ -47,12 +47,14 @@ public class SubsetSum {
             for(int j = 1; j <= sum; j++) {
 
                 if(arr[i - 1] > j) {
-                    dp[i][j] = false;
+                    dp[i][j] = dp[i - 1][j];
                 } else {
                     dp[i][j] = dp[i - 1][j] || dp[i - 1][j - arr[i - 1]];
                 }
             }
         }
+
+        System.out.println(Arrays.toString(dp[n]));
         return dp[n][sum];
     }
 
@@ -88,6 +90,8 @@ public class SubsetSum {
                 }
             }
         }
+
+
         return dp[arr.length][sum];
     }
 
