@@ -21,8 +21,6 @@ class Solution:
             start += 1
             end -= 1
 
-    
-
 nums = [1,2,3,4,5,6,7]
 k = 3
 
