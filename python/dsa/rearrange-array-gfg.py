@@ -1,6 +1,8 @@
 class Solution:
     #Function to rearrange an array so that arr[i] becomes arr[arr[i]]
     #with O(1) extra space.
+
+    # logic divident = divisor * quotient + reminder
     def arrange(self,arr, n): 
         #Your code here
 
